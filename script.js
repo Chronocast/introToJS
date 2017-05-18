@@ -67,3 +67,13 @@ countChar("mississippi", "i");
 countChar("mississippi", "s");
 countChar("whinnie the pooh", "n");
 
+//Part 5: integrating countChar into a new countB
+function newCountB (word)
+{
+    countChar(word, "B");    
+}
+
+countBs("RehaB");
+countBs("BBC");
+countBs("Baggins");
+countBs("BaBBages");
