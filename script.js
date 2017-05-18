@@ -46,10 +46,24 @@ function countBs (word)
 countBs("Baggins");
 countBs("BaBBages");
 countBs("BBC");
+countBs("RehaB");
 
+//Part 4: countChar, same as countBs except you can select which character it will search for
+function countChar (word, letter)
+{
+    //the char counter
+    var charCount = 0;
+    //loop through the string and check each character for match
+    for (var i = 0; i < word.length; i++)
+        if (word.charAt(i) == letter)
+            charCount += 1;
+    //push answer to console & page     
+    console.log(word + " has " + charCount + " " + letter + "'s");
+    document.body.innerHTML += word + " has " + charCount + " " + letter + "'s<br>";
+}
 
-
-
-
-
+countChar("velociraptor", "o");
+countChar("mississippi", "i");
+countChar("mississippi", "s");
+countChar("whinnie the pooh", "n");
 
