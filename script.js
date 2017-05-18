@@ -4,16 +4,17 @@
  *Author: Nate Hascup
  *Date: 05/17/17
  *IT 328: Intro to JavaScript Assignment
- *
+ *<- https://github.com/Chronocast/introToJS ->
  */
 
-document.body.innerHTML = "<h1>Introduction to JavaScript</h1>";
+//Part 1: Intro to JS
+document.body.innerHTML = "<h1>Introduction to JavaScript</h1><br>";
 
-document.body.innerHTML = "<h2>FizzBuzz</h2>";
+document.body.innerHTML += "<h2>FizzBuzz</h2><br>";
 
 console.log("Introduction to JavaScript");
 
-//print 1 - 100, but replace with word for %3,%5,or %3 & %5
+//Part 2: print 1 - 100, but replace with word for %3,%5,or %3 & %5
 for (var number = 1; number < 101; number += 1)
     //replace with FizzBuzz if %3 && %5 true
     if (number % 3 == 0 && number % 5 == 0)
@@ -27,4 +28,28 @@ for (var number = 1; number < 101; number += 1)
     //print number since it is in-divisible
     else
         console.log(number);
-        
+
+//Part 3: countBs, takes a string and returns # of capital 'B's are in said string  
+function countBs (word)
+{
+    //the B counter
+    var theBees = 0;
+    //loop through the string and check each character for B-ness
+    for (var i = 0; i < word.length; i++)
+        if (word.charAt(i) == "B")
+            theBees += 1;
+    //push answer to console & page
+    console.log(word + " has " + theBees + " Capital B(s)");
+    document.body.innerHTML += word + " has " + theBees + " Capital B(s)<br>";
+}
+
+countBs("Baggins");
+countBs("BaBBages");
+countBs("BBC");
+
+
+
+
+
+
+
